@@ -3,5 +3,9 @@ layout: layout.liquid
 title: 11ty Boilerplate
 ---
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
+<h1>Click the button to generate a randome name</h1>
+<div x-data="{ names: ['John', 'Paul', 'George', 'Ringo', 'Mick', 'Keith', 'Charlie', 'Ronnie', 'Robert', 'Jimmy'], chosenName: '' }">
+    <button @click="chosenName = names[Math.floor(Math.random() * names.length)]">Click me</button>
+    <h1 x-text="chosenName"></h1>
+</div>
 <img alt="pine" src="/images/pine.png" width="50" />
